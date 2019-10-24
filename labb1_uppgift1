@@ -1,0 +1,31 @@
+#include <stdlib.h> 
+#include <stdio.h> 
+
+int main(void)
+{
+
+	char myFavoritChar; //Skapar variabeln myFavoritChar 
+	char myFirstName[20];
+	char myLastName[20]; //Skapar variabeln myLastName som innehåller 20 tecken
+	int age;
+	float bodyTemp;
+
+	system("chcp 1252");
+	printf("Hej Världen!\n");
+	printf("\nSkriv ditt favorittecken: "); //Skriver ut "Skriv ditt favorittecken"
+	myFavoritChar = getchar();
+	getchar(); //Får programmet att stanna så man hinner läsa vad som står
+	printf("Tack då vet jag att ditt favorittecken är: %c\n", myFavoritChar);
+	printf("\nVad heter du: ");
+	scanf_s("%s", myFirstName, sizeof(myFirstName)); // Läser in värde från tangentbordet till variabeln myFirstName
+	scanf_s("%s", myLastName, sizeof(myLastName));
+	printf("Tack då vet jag att ditt förnamn är: %s och ditt efternamn är: %s\n", myFirstName, myLastName);
+	printf("\nHur gammal är du: ");
+	scanf_s("%d", &age);
+	printf("Tack då vet jag att du är %d år gammal\n", age);
+	printf("\nVilken kroppstemperatur upplever du att du har just nu: ");
+	scanf_s("%f", &bodyTemp); //Läser in kroppstemperaturen
+	printf("Tack då vet jag att du känner det som att din kroppstemperatur är: %g\n\n", bodyTemp);
+	system("pause"); // Får programmet att stanna tills man trycker på tangentbordet (getchar() ville ej fungera)
+	return 0;
+}
