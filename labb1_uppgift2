@@ -1,0 +1,28 @@
+#include <stdlib.h> 
+#include <stdio.h> 
+
+int main(void){
+	int bas1 = 5;
+	float bas2 = 5.0;
+	int hojd1 = 5;
+	float hojd2 = 5.0;
+
+	float area1 = bas1 * hojd1 / 2;
+	int area2 = bas1 * hojd1 / 2;
+	int area3 = bas1 * (hojd1 / 2);
+	float area4 = bas2 * (hojd1 / 2);
+	float area5 = bas1 * (hojd2 / 2);
+	float area6 = bas2 * hojd1 / 2;
+	int area7 = bas2 * hojd1 / 2;
+	
+	system("chcp 1252");
+	printf("Area1 är %g\n", area1);
+	printf("Area2 är %d\n", area2);
+	printf("Area3 är %d\n", area3);
+	printf("Area4 är %g\n", area4);
+	printf("Area5 är %g\n", area5);
+	printf("Area6 är %g\n", area6);
+	printf("Area7 är %d\n", area7);
+	system("pause");
+
+}
